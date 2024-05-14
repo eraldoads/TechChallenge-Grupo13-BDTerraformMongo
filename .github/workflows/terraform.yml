@@ -1,4 +1,4 @@
-name: Deploy Mongo Atlas com Terraform
+name: Deploy Mongo Atlas DB com Terraform
 
 on:
   push:
