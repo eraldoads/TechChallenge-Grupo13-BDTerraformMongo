@@ -23,16 +23,22 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
-          terraform_version: 1.8.3          
+          terraform_version: 1.8.3
       
       - name: Terraform Init
-        run: |    
-          export MONGODB_ATLAS_PUBLIC_KEY="kgyvflyv"
-          export MONGODB_ATLAS_PRIVATE_KEY="18c90564-30f0-4d0a-8154-4d7a9a214909"               
-          terraform init
+        run: terraform init
+        env: 
+          MONGODB_ATLAS_PUBLIC_KEY: ${{ secrets.MONGODB_ATLAS_PUBLIC_KEY }}
+          MONGODB_ATLAS_PRIVATE_KEY: ${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}
 
       - name: Terraform Plan
         run: terraform plan -out=tfplan
+        env: 
+          MONGODB_ATLAS_PUBLIC_KEY: ${{ secrets.MONGODB_ATLAS_PUBLIC_KEY }}
+          MONGODB_ATLAS_PRIVATE_KEY: ${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}
 
       - name: Terraform Apply
         run: terraform apply -auto-approve tfplan
+        env: 
+          MONGODB_ATLAS_PUBLIC_KEY: ${{ secrets.MONGODB_ATLAS_PUBLIC_KEY }}
+          MONGODB_ATLAS_PRIVATE_KEY: ${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}
