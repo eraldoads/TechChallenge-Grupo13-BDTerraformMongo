@@ -1,4 +1,4 @@
-name: Deploy na AWS com Terraform
+name: Deploy Mongo Atlas com Terraform
 
 on:
   push:
