@@ -13,13 +13,5 @@ terraform {
       source = "hashicorp/aws"
     }
   }
-  required_version = ">= 1.8"
-}
-
-provider "aws" {
-  region  = var.regionDefault
-
-  default_tags {
-    tags = var.tags
-  }
+  required_version = ">= 1.2"
 }
