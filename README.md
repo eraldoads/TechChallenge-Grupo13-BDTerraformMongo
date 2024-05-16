@@ -1,6 +1,6 @@
-# TechChallenge-Grupo13-BDTerraform
+# TechChallenge-Grupo13-BDTerraformMongo
 
-Este repositório é dedicado à infra banco de dados gerenciáveis com Terraform, com a finalidade de incorporar aprimoramentos baseados nas melhores práticas de CI/CD para a API.
+Este repositório é dedicado ao banco de dados MongoDB, no qual haverá uma collection destinada ao microsserviço de pagamentos.
 
 O deploy de todos os recursos é realizado pelo Github Actions a partir dos arquivos Terraform.
 
@@ -9,18 +9,21 @@ O deploy de todos os recursos é realizado pelo Github Actions a partir dos arqu
 🧑🏻‍💻 *<b>RM352316</b>*: Eraldo Antonio Rodrigues </br>
 🧑🏻‍💻 *<b>RM352032</b>*: Luís Felipe Amengual Tatsch </br>
 
-## ☑️ Modelo E/R
-Optamos pelo banco de dados relacional, pois, desta forma, temos uma representação das entidades e seus relacionamentos. Além disso, mantemos a integridade referencial com as chaves primárias e estrangeiras, evitando dados duplicados e inconsistências.
+## ☑️ Arquitetura
+Na execução da action, é realizada a criação do cluster e do database no MongoBD Atlas:
 
-O modelo abaixo representa todas as entidades criadas e seus relacionamentos no banco de dados:
+![image](https://github.com/eraldoads/TechChallenge-Grupo13-BDTerraformMongo/assets/47857203/dc1b8da1-1949-4d1c-9fd9-a36dd222e325)
 
-![image](https://github.com/eraldoads/TechChallenge-Grupo13-BDTerraform/assets/47857203/ea3ab9e3-e5da-4275-b973-2561b4078352)
+Neste momento, também é criado um Security Group na AWS onde podemos definir as regras de acesso ao database:
 
-Para tal, utilizamos o serviço RDS da Amazon para instanciar o banco de dados MySQL.
+![image](https://github.com/eraldoads/TechChallenge-Grupo13-BDTerraformMongo/assets/47857203/bf94805f-b906-4189-961e-aa27932cd561)
 
-Mesmo sendo um banco de dados que não permite escalonamento horizontal, somente vertical, atenderá perfeitamente às necessidades do negócio da lanchonete.
+De posse da connection string, podemos acessar o banco utilizando o MongoDB Compass e realizar a criação da collection:
 
-![image](https://github.com/eraldoads/TechChallenge-Grupo13-BDTerraform/assets/47857203/8c25e04c-2c36-4c86-98e8-c1dc9aab1806)
+![image](https://github.com/eraldoads/TechChallenge-Grupo13-BDTerraformMongo/assets/47857203/7fd33041-e4fc-4eb8-8a30-5cfe50c1bc34)
 
+![image](https://github.com/eraldoads/TechChallenge-Grupo13-BDTerraformMongo/assets/47857203/ef1075cf-68e1-450b-a01f-55e02e04f15a)
+
+![image](https://github.com/eraldoads/TechChallenge-Grupo13-BDTerraformMongo/assets/47857203/cddb22bf-f780-42ff-b184-401da8dace2e)
 
 
