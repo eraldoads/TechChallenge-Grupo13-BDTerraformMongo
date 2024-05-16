@@ -14,7 +14,7 @@ Na execução da action, é realizada a criação do cluster e do database no Mo
 
 ![image](https://github.com/eraldoads/TechChallenge-Grupo13-BDTerraformMongo/assets/47857203/dc1b8da1-1949-4d1c-9fd9-a36dd222e325)
 
-Neste momento, também é criado um Security Group na AWS onde podemos definir as regras de acesso ao database:
+Neste momento, também é criado um Security Group na AWS onde podemos definir as regras de acesso ao cluster:
 
 ![image](https://github.com/eraldoads/TechChallenge-Grupo13-BDTerraformMongo/assets/47857203/bf94805f-b906-4189-961e-aa27932cd561)
 
