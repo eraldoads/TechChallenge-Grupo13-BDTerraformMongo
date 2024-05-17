@@ -45,6 +45,14 @@ variable "mongodb_version" {
   description = "MongoDB Version"
 }
 
+variable "username" {
+  type        = string  
+}
+
+variable "password" {
+  type        = string  
+}
+
 # IP Address Access
 variable "ip_address" {
   type = string  
