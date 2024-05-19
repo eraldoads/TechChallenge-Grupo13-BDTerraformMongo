@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - homolog
+      - main
 
 jobs:
   deploy:
