@@ -2,8 +2,7 @@ name: Deploy Mongo Atlas DB com Terraform
 
 on:
   push:
-    branches:
-      - homolog
+    branches:      
       - main
 
 jobs:
